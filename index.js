@@ -1,17 +1,21 @@
 const express = require("express");
 const app = express();
-const FgBlue = "\x1b[34m"
-const Reset = "\x1b[0m"
 
-app.use(express.static('public'))
+const PORT = 3000;
 
-app.get("/", (req, res) => {
-  res.send("Hello, World!!")
-})
+const FgBlue = "\x1b[34m";
+const Reset = "\x1b[0m";
 
-app.listen(3000, () => {
-  console.log("Web Server is up in running on port 3000")
-  console.log("URL: " +FgBlue + "http://localhost:3000/" + Reset)
-  console.log()
-  console.log("==== SERVER LOGS ====")
+app.use(express.static('public'));
+
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    "msg": "Server Up In Running!!!"
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`Web Server is up in running on ${PORT}`);
+  console.log(`URL: ${FgBlue} "http://localhost:${PORT}/" ${Reset}`);
+  console.log();
 });
