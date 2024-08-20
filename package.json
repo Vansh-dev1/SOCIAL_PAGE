@@ -1,0 +1,18 @@
+{
+  "name": "social_page",
+  "version": "1.0.0",
+  "description": "It is an e-commerce web app where you can shop products online.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vansh-dev1",
+  "contributors": [
+    "JeelDobariya38"
+  ],
+  "homepage": "https://github.com/Vansh-dev1/SOCIAL_PAGE#readme",
+  "bugs": {
+    "url": "https://github.com/Vansh-dev1/SOCIAL_PAGE/issues"
+  },
+  "license": "MIT"
+}
